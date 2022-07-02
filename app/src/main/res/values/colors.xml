@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1976d2</color>
+    <color name="colorPrimaryDark">#004ba0</color>
+    <color name="colorAccent">#00ACC1</color>
+    <color name="appBackground">#08000000</color>
+
+    <!-- CARD -->
+    <color name="colorPrinted">#43A047</color>
+    <color name="colorQueuing">#E53935</color>
+    <color name="cardBorder">?attr/colorPrimary</color>
+    <color name="textColor">#FFFFFF</color>
+    <color name="textShadow">#2B2B2B</color>
+</resources>

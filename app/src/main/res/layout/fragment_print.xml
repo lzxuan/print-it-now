@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.print.PrintFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/printBottomBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/buttonSelect"
+                    style="@style/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/vertical_margin"
+                    android:text="@string/select_files"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ProgressBar
+                    android:id="@+id/loading"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/vertical_margin"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/buttonSelect"
+                    app:layout_constraintStart_toStartOf="@+id/buttonSelect"
+                    app:layout_constraintTop_toBottomOf="@+id/buttonSelect" />
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontalScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/horizontal_margin"
+                    android:layout_marginTop="@dimen/small_vertical_margin"
+                    android:layout_marginEnd="@dimen/horizontal_margin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/loading">
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chipGroupFileName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:singleLine="true">
+
+                    </com.google.android.material.chip.ChipGroup>
+
+                </HorizontalScrollView>
+
+                <Spinner
+                    android:id="@+id/spinnerPaperSize"
+                    style="@style/spinner_style"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="@dimen/horizontal_margin"
+                    android:layout_marginTop="@dimen/vertical_margin"
+                    android:layout_marginEnd="@dimen/horizontal_margin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+                <Spinner
+                    android:id="@+id/spinnerColor"
+                    style="@style/spinner_style"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="@dimen/vertical_margin"
+                    app:layout_constraintEnd_toEndOf="@+id/spinnerPaperSize"
+                    app:layout_constraintStart_toStartOf="@+id/spinnerPaperSize"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerPaperSize" />
+
+                <Spinner
+                    android:id="@+id/spinnerTwoSided"
+                    style="@style/spinner_style"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="@dimen/vertical_margin"
+                    app:layout_constraintEnd_toEndOf="@+id/spinnerColor"
+                    app:layout_constraintStart_toStartOf="@+id/spinnerColor"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerColor" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/editCopies"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/vertical_margin"
+                    android:layout_marginBottom="@dimen/vertical_margin"
+                    android:hint="@string/number_of_copies"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/spinnerTwoSided"
+                    app:layout_constraintStart_toStartOf="@+id/spinnerTwoSided"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerTwoSided">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="1234567890"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:text="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/printBottomBar"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/bottom_bar_height"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/textPages"
+                style="@style/bottom_bar_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/horizontal_margin"
+                tools:text="20 pages"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonCheckOut"
+                style="@style/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/horizontal_margin"
+                android:text="@string/checkout"
+                android:textColor="@color/colorPrimary"
+                app:backgroundTint="#E5FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:enabled="false" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

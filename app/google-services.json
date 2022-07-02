@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "307956112754",
+    "firebase_url": "https://printitnow.firebaseio.com",
+    "project_id": "printitnow",
+    "storage_bucket": "printitnow.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307956112754:android:b0735742cbe4f4e4a991eb",
+        "android_client_info": {
+          "package_name": "com.triplicity.printitnow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "307956112754-b6fl96gfi34m16acap7l0cukbjuh6rf4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.triplicity.printitnow",
+            "certificate_hash": "e5da41c2b75c3d1e540617b7dcd378050426123b"
+          }
+        },
+        {
+          "client_id": "307956112754-551885lhj9id5804odnp30lfrnbrum1v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALk06IPRcWxH2EUU3J54rncDaiVHaw0iM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "307956112754-551885lhj9id5804odnp30lfrnbrum1v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

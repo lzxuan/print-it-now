@@ -1,0 +1,91 @@
+<resources>
+    <string name="facebook_application_id" translatable="false">262220231483497</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb262220231483497</string>
+
+    <string name="app_name">Print It Now</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_desc">Print It Now</string>
+    <string name="nav_header_title">Guest</string>
+    <string name="nav_header_subtitle">Sign in to continue</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_prints">Prints</string>
+    <string name="menu_about">About</string>
+    <string name="menu_select_files">Select Files</string>
+    <string name="menu_payment">Payment</string>
+    <string name="menu_dark_theme">Dark Theme</string>
+    <string name="menu_sign_out">Sign Out</string>
+
+    <string name="home_second">Home Second</string>
+
+    <string name="title_sign_in_error">Sign In Error</string>
+    <string name="message_no_network">No network connection</string>
+    <string name="message_unknown">Unknown error</string>
+    <string name="option_retry">Retry</string>
+    <string name="option_exit">Exit</string>
+
+    <string name="sign_in_to_continue">Please sign in to continue</string>
+    <string name="account_blocked">This account is blocked</string>
+
+    <!-- PROFILE -->
+    <string name="name">Full Name</string>
+    <string name="email">Email Address</string>
+    <string name="phone">Phone Number</string>
+    <string name="update">Update</string>
+    <string name="profile_updated">Profile updated successfully</string>
+
+    <!-- SELECT FILES -->
+    <string name="select_files">Select Files</string>
+    <string name="number_of_copies">Number of Copies</string>
+    <string name="install_file_manager">Please install a File Manager</string>
+    <string name="no_file_chosen">No file chosen</string>
+    <string name="select_at_least_1_file">Please select at least 1 file</string>
+
+    <!-- SPINNER PAPER SIZE -->
+    <string-array name="paper_size_array">
+        <item>A4</item>
+        <item>A3</item>
+        <item>A2</item>
+        <item>A1</item>
+    </string-array>
+
+    <!-- SPINNER COLOR -->
+    <string-array name="color_array">
+        <item>Color</item>
+        <item>Black &amp; White</item>
+    </string-array>
+
+    <!-- SPINNER TWO-SIDED -->
+    <string-array name="side_array">
+        <item>One-Sided</item>
+        <item>Two-Sided</item>
+    </string-array>
+
+    <!-- PAYMENT -->
+    <string name="checkout">Check Out</string>
+    <string name="cash">Cash on collection</string>
+    <string name="cardName">Name on Card</string>
+    <string name="cardNum">Card Number</string>
+    <string name="cardExp">Expiration</string>
+    <string name="cardCVV">CVV</string>
+    <string name="confirm_pay">Confirm &amp; Pay</string>
+    <string name="price">RM%.2f</string>
+    <string name="printing_sent">Printing request sent successfully</string>
+    <string name="validation_error">Please fill in all fields</string>
+
+    <!-- ABOUT -->
+    <string name="version">v1.0.0</string>
+    <string name="link_privacy"><a href="https://printitnow.web.app/privacy">Privacy Policy</a></string>
+    <string name="link_terms"><a href="https://printitnow.web.app/terms">Terms and Condition</a></string>
+
+    <!-- PRINTS -->
+    <string name="print_config">%s size, %s, %s, %s copy(ies), %d page(s)</string>
+    <string name="getting_price">Getting price…</string>
+    <string name="print">Print</string>
+    <string name="print_id">Print ID</string>
+
+    <!-- THEME-->
+    <string name="theme_switch">Dark Theme</string>
+</resources>

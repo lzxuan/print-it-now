@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/menu_main"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_store"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_menu_profile"
+            android:title="@string/menu_profile" />
+        <item
+            android:id="@+id/nav_prints"
+            android:icon="@drawable/ic_menu_print"
+            android:title="@string/menu_prints" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_menu_settings"
+            android:title="@string/menu_about" />
+    </group>
+
+    <group
+        android:id="@+id/menu_theme"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/switch_theme"
+            android:title="@string/menu_dark_theme"
+            app:actionLayout="@layout/switch_item"
+            android:icon="@drawable/ic_brightness"
+            app:showAsAction="always" />
+    </group>
+
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_sign_out"
+            android:icon="@drawable/ic_menu_sign_out"
+            android:title="@string/menu_sign_out" />
+    </group>
+</menu>

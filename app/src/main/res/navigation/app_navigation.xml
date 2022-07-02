@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.triplicity.printitnow.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_print_print"
+            app:destination="@id/print_print" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.triplicity.printitnow.ui.profile.ProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_prints"
+        android:name="com.triplicity.printitnow.ui.prints.PrintsFragment"
+        android:label="@string/menu_prints"
+        tools:layout="@layout/fragment_prints" />
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.triplicity.printitnow.ui.about.AboutFragment"
+        android:label="@string/menu_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/print_payment"
+        android:name="com.triplicity.printitnow.ui.print.PaymentFragment"
+        android:label="@string/menu_payment">
+        <action
+            android:id="@+id/action_print_payment_to_nav_prints"
+            app:destination="@id/nav_prints"
+            app:popUpTo="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/print_print"
+        android:name="com.triplicity.printitnow.ui.print.PrintFragment"
+        android:label="@string/menu_select_files">
+        <action
+            android:id="@+id/action_print_print_to_print_payment"
+            app:destination="@id/print_payment" />
+        <argument
+            android:name="uid"
+            app:argType="string" />
+        <argument
+            android:name="shopId"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
